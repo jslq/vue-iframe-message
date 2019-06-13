@@ -10,14 +10,14 @@ npm install @jslq/vue-iframe-messager --save
 ``` javascript
 import Vue from 'vue'
 import store from './store'
-import VueIframeMessager from 'vue-socket.io'
+import VueIframeMessager from '@jslq/vue-iframe-messager'
 
 Vue.use(new VueIframeMessager({
     role: 'iframe',
 	vuex: {
         store,
-        actionPrefix: "MESSAGE_",  //默认值就是这个
-        mutationPrefix: "MESSAGE_" //没有默认值，需手动传入
+        actionPrefix: "MESSAGER_",  //默认值就是这个
+        mutationPrefix: "MESSAGER_" //没有默认值，需手动传入
 	},
 	options: {
 		window: window,
@@ -30,14 +30,14 @@ Vue.use(new VueIframeMessager({
 ``` javascript
 import Vue from 'vue'
 import store from './store'
-import VueIframeMessager from 'vue-socket.io'
+import VueIframeMessager from '@jslq/vue-iframe-messager'
 
 Vue.use(new VueIframeMessager({
     role: 'parent',
 	vuex: {
         store,
-        actionPrefix: "MESSAGE_",  //默认值就是这个
-        mutationPrefix: "MESSAGE_" //没有默认值，需手动传入
+        actionPrefix: "MESSAGER_",  //默认值就是这个
+        mutationPrefix: "MESSAGER_" //没有默认值，需手动传入
 	},
 	options: {
         iframeId: 'my-iframe'
@@ -82,9 +82,9 @@ export default {
 -----|-----|-----|-----|-----
 role|string|`null`|是|看上面
 alias|string|`messager`|不是|如果用到vue插件也是以messager作为名字，为了防止冲突，可以起别名，不过一般不会有人用这个名字
-vuex.store|Vuex|`null`|不是|Vuex store instance
-vuex.actionPrefix|String|`null`|不是|Prefix for emitting server side vuex actions
-vuex.mutationPrefix|String |`null`|不是|Prefix for emitting server side vuex mutations
+vuex.store|Vuex|`null`|不是|Vuex store 实例
+vuex.actionPrefix|String|`null`|不是|前缀
+vuex.mutationPrefix|String |`null`|不是|前缀
 options.iframeId|string|`null`|是|role是'parent'时必传
 options.origin|string|`null`|是|role是'iframe'并且和父窗口跨域时必传
 options.window|DOMElement|`null`|是|window对象
