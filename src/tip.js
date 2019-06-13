@@ -3,10 +3,12 @@ export const tip = `
 
 Vue.use(new VueIframeMessager({
     role: 'iframe' || 'parent',  //必填
+    alias: '' //非必填
     vuex: {
-
+        store,
     },
     options: {
+        iframeId: ''   
         window: window,  //window对象,必填
         origin: process.env.LOCAL_ORIGIN //vue-cli3中
     }
