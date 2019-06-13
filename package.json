@@ -1,0 +1,27 @@
+{
+  "name": "@jslq/vue-iframe-messager",
+  "version": "1.0.0",
+  "description": "[vue]iframe跨域通信插件",
+  "main": "src/index.js",
+  "scripts": {
+    
+  },
+  "keywords": [
+    "vuejs",
+    "iframe",
+    "postmeassge",
+    "message",
+    "vue",
+    "vuex"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jslq/vue-iframe-message.git"
+  },
+  "author": "jslq <917498254@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jslq/vue-iframe-message/issues"
+  },
+  "homepage": "https://github.com/jslq/vue-iframe-message#readme"
+}
