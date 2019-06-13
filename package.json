@@ -2,9 +2,9 @@
   "name": "@jslq/vue-iframe-messager",
   "version": "1.0.0",
   "description": "[vue]iframe跨域通信插件",
-  "main": "src/index.js",
+  "main": "dist/vue-IFMessager.js",
   "scripts": {
-    
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "keywords": [
     "vuejs",
@@ -23,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/jslq/vue-iframe-message/issues"
   },
-  "homepage": "https://github.com/jslq/vue-iframe-message#readme"
+  "homepage": "https://github.com/jslq/vue-iframe-message#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-transform-classes": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  }
 }
