@@ -14,15 +14,15 @@ import VueIframeMessager from '@jslq/vue-iframe-messager'
 
 Vue.use(new VueIframeMessager({
     role: 'iframe',
-	vuex: {
+    vuex: {
         store,
         actionPrefix: "MESSAGER_",  //默认值就是这个
         mutationPrefix: "MESSAGER_" //没有默认值，需手动传入
-	},
-	options: {
-		window: window,
+    },
+    options: {
+        window: window,
         origin: process.env.VUE_APP_PARENT_ORIGIN  //在vue-cli3中可以存父窗口的origin，同域可以不传
-	}
+    }
 }))
 ```
 
@@ -34,16 +34,16 @@ import VueIframeMessager from '@jslq/vue-iframe-messager'
 
 Vue.use(new VueIframeMessager({
     role: 'parent',
-	vuex: {
+    vuex: {
         store,
         actionPrefix: "MESSAGER_",  //默认值就是这个
         mutationPrefix: "MESSAGER_" //没有默认值，需手动传入
-	},
-	options: {
+    },
+    options: {
         iframeId: 'my-iframe'
         window: window,
         origin: process.env.VUE_APP_IFRAME_ORIGIN  //在vue-cli3中可以存父窗口的origin，同域可以不传
-	}
+    }
 }))
 ```
 
